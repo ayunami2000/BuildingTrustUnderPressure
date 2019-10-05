@@ -29,7 +29,7 @@
   </head>
   <body>
     <h1>Employee Survey</h1>
-    <form onsubmit="event.preventDefault();document.querySelector('#results').innerText=JSON.stringify(Object.fromEntries(new FormData(this)),null,2);document.body.className='results';">
+    <form onsubmit="event.preventDefault();document.querySelector('#results pre').innerText=JSON.stringify(Object.fromEntries(new FormData(this)),null,2);document.body.className='results';">
       Name: <input type="text" name="name" placeholder="Enter your name..."/><br>
       Email Address: <input type="email" name="email" placeholder="Enter your email address..."/><br>
       <input type="submit" value="Submit survey"/>
