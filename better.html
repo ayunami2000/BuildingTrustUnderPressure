@@ -21,8 +21,8 @@
   </head>
   <body>
     <form onsubmit="event.preventDefault();document.querySelector('pre').innerText=JSON.stringify(Object.fromEntries(new FormData(this)),null,2);document.body.className='results';">
-      <input type="text" name="name" placeholder="Enter your name..."/>
-      <input type="email" name="email" placeholder="Enter your email address..."/>
+      Name: <input type="text" name="name" placeholder="Enter your name..."/><br>
+      Email Address: <input type="email" name="email" placeholder="Enter your email address..."/><br>
       <input type="submit" value="Submit survey"/>
     </form>
   </body>
