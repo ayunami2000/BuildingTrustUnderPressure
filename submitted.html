@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Submitted</title>
+</head>
+<body>
+<h1>Results:</h1>
+<pre>Loading results...</pre>
+<script>
+if(!sessionStorage.getItem('survey'))window.location.href="index.html";
+var results=sessionStorage.getItem('survey');
+sessionStorage.clear();
+document.querySelector('pre').innerText=JSON.stringify(results);
+</script>
+</body>
+</html>
