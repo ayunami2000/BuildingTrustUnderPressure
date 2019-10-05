@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Survey</title>    
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
+      html,body{
+        font-family: 'Work Sans', sans-serif;
+      }
+      *{transition:transform .5s ease;}
+      form{transform: scaleY(100%);}
+      pre{transform: scaleY(0);}
+      .results form{
+        transform: scaleY(0);
+      }
+      .results pre{
+        transform: scaleY(100%);
+      }
+    </style>
+  </head>
+  <body>
+    <form onsubmit="event.preventDefault();document.querySelector('pre').innerText=JSON.stringify(Object.fromEntries(new FormData(this)),null,2);document.body.className='results';">
+      <input type="text" name="name" placeholder="Enter your name..."/>
+      <input type="email" name="email" placeholder="Enter your email address..."/>
+      <input type="submit" value="Submit survey"/>
+    </form>
+  </body>
+  <pre>Loading results...</pre>
+</html>
