@@ -27,5 +27,19 @@
   &lt;i&gt;<i>italic</i>&lt;/i&gt;<br>
   &lt;u&gt;<u>underline</u>&lt;/u&gt;<br>
   &lt;span style="color:blue;"&gt;blue&lt;/span&gt; = <span style="color:blue;">blue</span>
+  <br><hr><br>
+  
+  <!--this method uses 2 pages, but there are easier methods that use the same page and don't even redirect.-->
+  
+  <!--the form itself-->
+  <!--onsubmit: basically sets a session storage thing to the form data (it has to convert it to an Object for this to work)-->
+  <form onsubmit="sessionStorage.setItem('survey',JSON.stringify(Object.fromEntries(new FormData(this))));" action="submitted.html">
+    Name: <input type="text" name="Name" placeholder="Enter your name..."/><br>
+    <input type="submit" value="Submit Survey"/>
+  </form>
+  <!--if JavaScript is disabled in the user's browser-->
+  <noscript>
+    <h2 style="color:red;">Error: This site requires JavaScript to be enabled.</h2>
+  </noscript>
 </body>
 </html>
