@@ -10,11 +10,10 @@
     <script>
       if(!sessionStorage.getItem('survey'))window.location.href="index.html";
       //use this to read the data:
-      //var results=JSON.parse(sessionStorage.getItem('survey'));
-      //instead we use this because we are only outputting the text version of the data so why convert it into an Object only to convert it back
-      var results=sessionStorage.getItem('survey');
+      var results=JSON.parse(sessionStorage.getItem('survey'));
+      //e.g. to get the element on first page with ' name="foo" ' use: results['foo']
       sessionStorage.clear();
-      document.querySelector('pre').innerText=results;
+      document.querySelector('pre').innerText=JSON.stringify(results,null,2);
     </script>
   </body>
 </html>
